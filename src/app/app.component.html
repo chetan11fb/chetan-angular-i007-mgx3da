@@ -1,9 +1,30 @@
 <!-- <hello name="{{ name }}"></hello> /-->
-<div>
-  <h1>{{ Pagetitle }}</h1>
-  My First app
+<button mat-button [matMenuTriggerFor]="aboveMenu">Home</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
 
- <pm-products> </pm-products>
+<button mat-button [matMenuTriggerFor]="belowMenu">Product</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">Cart</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="afterMenu">Service</button>
+<mat-menu #afterMenu="matMenu" xPosition="after">
+  <button mat-menu-item>Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
+
+<div>
+  <h1 style="background-color:powderblue;">{{ Pagetitle }}</h1>
+
+  <pm-products> </pm-products>
 </div>
-<p>Chetan Start editing to see some magic happen :)</p>
-  

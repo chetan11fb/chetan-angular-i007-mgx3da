@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector:'pm-products',
-  templateUrl: '../Products/productlist.html'
+  templateUrl: '../Products/productlist.html',
+  styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent  {
   pagetitle:string='Product List';
@@ -13,6 +14,7 @@ export class ProductListComponent  {
   imageMargin = 2;
   showImage: boolean = false;
   errorMessage = '';
+  listFilter: string = '';
 
   toggleImage(): void {
     this.showImage = !this.showImage;
