@@ -11,9 +11,12 @@ export class ProductListComponent  {
   pagetitle:string='Product List';
   imageWidth = 50;
   imageMargin = 2;
-  showImage = false;
+  showImage: boolean = false;
   errorMessage = '';
 
+  toggleImage(): void {
+    this.showImage = !this.showImage;
+  }
   products: any[] =
   [
     {
